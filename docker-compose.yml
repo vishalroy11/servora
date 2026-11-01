@@ -1,0 +1,17 @@
+# Optional local PostgreSQL via Docker (not required if you already run Postgres).
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: servora-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: servora
+      POSTGRES_PASSWORD: servora_dev_password
+      POSTGRES_DB: servora
+    ports:
+      - '5432:5432'
+    volumes:
+      - servora_pg_data:/var/lib/postgresql/data
+
+volumes:
+  servora_pg_data:

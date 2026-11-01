@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build / cache
+dist/
+build/
+.output/
+.nuxt/
+.nitro/
+.cache/
+.data/
+coverage/
+
+# Env & secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Logs & OS
+logs/
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Prisma
+backend/prisma/*.db
+backend/prisma/*.db-journal
+
+# Uploads (future)
+uploads/
